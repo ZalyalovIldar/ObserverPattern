@@ -12,6 +12,11 @@
 		7C4B9D14221ACA6A00DED97D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D12221ACA6A00DED97D /* Main.storyboard */; };
 		7C4B9D16221ACA6B00DED97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D15221ACA6B00DED97D /* Assets.xcassets */; };
 		7C4B9D19221ACA6B00DED97D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D17221ACA6B00DED97D /* LaunchScreen.storyboard */; };
+		7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D20221ACAAA00DED97D /* NetManager.swift */; };
+		7C4B9D24221ACF8D00DED97D /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D22221ACF8D00DED97D /* MyTableViewCell.swift */; };
+		7C4B9D25221ACF8D00DED97D /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D23221ACF8D00DED97D /* MyTableViewCell.xib */; };
+		7C4B9D27221AD97400DED97D /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D26221AD97400DED97D /* MiddleViewController.swift */; };
+		7C4B9D29221AD97A00DED97D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D28221AD97A00DED97D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		7C4B9D15221ACA6B00DED97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4B9D18221ACA6B00DED97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4B9D1A221ACA6B00DED97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4B9D20221ACAAA00DED97D /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
+		7C4B9D22221ACF8D00DED97D /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		7C4B9D23221ACF8D00DED97D /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		7C4B9D26221AD97400DED97D /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
+		7C4B9D28221AD97A00DED97D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 			children = (
 				7C4B9D0E221ACA6A00DED97D /* AppDelegate.swift */,
 				7C4B9D10221ACA6A00DED97D /* ViewController.swift */,
+				7C4B9D26221AD97400DED97D /* MiddleViewController.swift */,
+				7C4B9D28221AD97A00DED97D /* SettingsViewController.swift */,
+				7C4B9D22221ACF8D00DED97D /* MyTableViewCell.swift */,
+				7C4B9D23221ACF8D00DED97D /* MyTableViewCell.xib */,
 				7C4B9D12221ACA6A00DED97D /* Main.storyboard */,
 				7C4B9D15221ACA6B00DED97D /* Assets.xcassets */,
 				7C4B9D17221ACA6B00DED97D /* LaunchScreen.storyboard */,
 				7C4B9D1A221ACA6B00DED97D /* Info.plist */,
+				7C4B9D20221ACAAA00DED97D /* NetManager.swift */,
 			);
 			path = SolidProject;
 			sourceTree = "<group>";
@@ -123,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C4B9D19221ACA6B00DED97D /* LaunchScreen.storyboard in Resources */,
+				7C4B9D25221ACF8D00DED97D /* MyTableViewCell.xib in Resources */,
 				7C4B9D16221ACA6B00DED97D /* Assets.xcassets in Resources */,
 				7C4B9D14221ACA6A00DED97D /* Main.storyboard in Resources */,
 			);
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B9D27221AD97400DED97D /* MiddleViewController.swift in Sources */,
 				7C4B9D11221ACA6A00DED97D /* ViewController.swift in Sources */,
+				7C4B9D24221ACF8D00DED97D /* MyTableViewCell.swift in Sources */,
+				7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */,
 				7C4B9D0F221ACA6A00DED97D /* AppDelegate.swift in Sources */,
+				7C4B9D29221AD97A00DED97D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
