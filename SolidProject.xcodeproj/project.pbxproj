@@ -13,6 +13,8 @@
 		7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D20221ACAAA00DED97D /* NetManager.swift */; };
 		CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4834472221FE5600BCE19E /* RegistrationViewController.swift */; };
 		CE48344B2222016F00BCE19E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48344A2222016F00BCE19E /* Extensions.swift */; };
+		CECA89BD2222941100B99C85 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89BC2222941100B99C85 /* LoginViewController.swift */; };
+		CECA89C02222946100B99C85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89BF2222946100B99C85 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7C4B9D20221ACAAA00DED97D /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		CE4834472221FE5600BCE19E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CE48344A2222016F00BCE19E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CECA89BC2222941100B99C85 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CECA89BF2222946100B99C85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		CE38945722219AAD00ACC48F /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CECA89BE2222944E00B99C85 /* base */,
+				CECA89BB2222940000B99C85 /* login */,
 				CE4834462221FE0900BCE19E /* registration */,
 			);
 			path = ui;
@@ -105,6 +111,22 @@
 				CE4834472221FE5600BCE19E /* RegistrationViewController.swift */,
 			);
 			path = registration;
+			sourceTree = "<group>";
+		};
+		CECA89BB2222940000B99C85 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CECA89BC2222941100B99C85 /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		CECA89BE2222944E00B99C85 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				CECA89BF2222946100B99C85 /* BaseViewController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +202,9 @@
 				CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */,
 				7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */,
 				7C4B9D0F221ACA6A00DED97D /* AppDelegate.swift in Sources */,
+				CECA89BD2222941100B99C85 /* LoginViewController.swift in Sources */,
 				CE48344B2222016F00BCE19E /* Extensions.swift in Sources */,
+				CECA89C02222946100B99C85 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SolidProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SolidProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

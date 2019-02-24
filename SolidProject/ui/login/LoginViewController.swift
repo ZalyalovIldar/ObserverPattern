@@ -1,5 +1,5 @@
 //
-//  RegistrationViewController.swift
+//  LoginViewController.swift
 //  SolidProject
 //
 //  Created by Тимур Бадретдинов on 24/02/2019.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: BaseViewController {
+class LoginViewController: BaseViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
 }
