@@ -10,20 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--settings-->
+        <!--View Controller-->
         <scene sceneID="0l1-fS-Cst">
             <objects>
-                <viewController id="gwJ-RT-B7h" sceneMemberID="viewController">
+                <viewController id="gwJ-RT-B7h" customClass="SettingsViewController" customModule="SolidProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qk-ki-Hwf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-RZ-qLN">
-                                <rect key="frame" x="146.66666666666666" y="329.66666666666669" width="120.99999999999997" height="29"/>
+                                <rect key="frame" x="156.66666666666666" y="329.66666666666669" width="100.99999999999997" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Dark"/>
+                                    <segment title="White"/>
                                 </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,12 +37,20 @@
                     <tabBarItem key="tabBarItem" title="settings" id="Uv0-wH-9oI">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="darkSelector" destination="PL4-RZ-qLN" id="9W3-Rk-dtZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Hr-zi-1NJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Lar-bh-C2B" customClass="SettingsConfiguration" customModule="SolidProject" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="gwJ-RT-B7h" id="d6Q-KT-niD"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-95" y="-73"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome to Tim's app!-->
         <scene sceneID="DfH-8h-U7j">
             <objects>
                 <viewController id="NZZ-dg-C1f" sceneMemberID="viewController">
@@ -73,7 +82,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r9y-LP-UJh"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Zun-5N-86K"/>
+                    <navigationItem key="navigationItem" title="Welcome to Tim's app!" largeTitleDisplayMode="never" id="Zun-5N-86K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAf-cO-rXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +385,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KZQ-6V-liE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Registration" id="Nqg-BG-JRr">
+                    <navigationItem key="navigationItem" title="Login" id="Nqg-BG-JRr">
                         <barButtonItem key="rightBarButtonItem" title="enter" id="2Tn-gt-3Kf">
                             <connections>
                                 <action selector="btnEnter:" destination="VYU-YT-UzJ" id="QD9-HG-1Et"/>

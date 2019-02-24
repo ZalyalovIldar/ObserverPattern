@@ -31,6 +31,11 @@
 		CEF228892222F42700F8C85E /* ProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228882222F42700F8C85E /* ProfileOutput.swift */; };
 		CEF2288B2222F48000F8C85E /* ProfileConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2288A2222F48000F8C85E /* ProfileConfiguration.swift */; };
 		CEF2288D2222F4A900F8C85E /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2288C2222F4A900F8C85E /* ProfilePresenter.swift */; };
+		CEF228922222FE6400F8C85E /* SettingsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228912222FE6400F8C85E /* SettingsInput.swift */; };
+		CEF228942222FE6F00F8C85E /* SettingsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228932222FE6F00F8C85E /* SettingsOutput.swift */; };
+		CEF228962222FEA300F8C85E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228952222FEA300F8C85E /* SettingsViewController.swift */; };
+		CEF228982222FEE000F8C85E /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228972222FEE000F8C85E /* SettingsPresenter.swift */; };
+		CEF2289A2222FF0900F8C85E /* SettingsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF228992222FF0900F8C85E /* SettingsConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		CEF228882222F42700F8C85E /* ProfileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOutput.swift; sourceTree = "<group>"; };
 		CEF2288A2222F48000F8C85E /* ProfileConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfiguration.swift; sourceTree = "<group>"; };
 		CEF2288C2222F4A900F8C85E /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		CEF228912222FE6400F8C85E /* SettingsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInput.swift; sourceTree = "<group>"; };
+		CEF228932222FE6F00F8C85E /* SettingsOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOutput.swift; sourceTree = "<group>"; };
+		CEF228952222FEA300F8C85E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CEF228972222FEE000F8C85E /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		CEF228992222FF0900F8C85E /* SettingsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 		CE38945622219AA300ACC48F /* presenters */ = {
 			isa = PBXGroup;
 			children = (
+				CEF2288E2222FE3F00F8C85E /* settings */,
 				CEF228822222F3AD00F8C85E /* profile */,
 				CEF2287E2222D75A00F8C85E /* login */,
 				CECA89C122229A9100B99C85 /* registration */,
@@ -118,6 +129,7 @@
 		CE38945722219AAD00ACC48F /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CEF2288F2222FE4A00F8C85E /* settings */,
 				CEF228812222F3A500F8C85E /* profile */,
 				CECA89BB2222940000B99C85 /* login */,
 				CE4834462221FE0900BCE19E /* registration */,
@@ -128,6 +140,7 @@
 		CE38945822219AB200ACC48F /* configurators */ = {
 			isa = PBXGroup;
 			children = (
+				CEF228902222FE5000F8C85E /* settings */,
 				CEF228832222F3B900F8C85E /* profile */,
 				CEF2287B2222D0B500F8C85E /* login */,
 				CECA89D32222A0E100B99C85 /* registration */,
@@ -241,6 +254,32 @@
 			path = profile;
 			sourceTree = "<group>";
 		};
+		CEF2288E2222FE3F00F8C85E /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEF228972222FEE000F8C85E /* SettingsPresenter.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		CEF2288F2222FE4A00F8C85E /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEF228912222FE6400F8C85E /* SettingsInput.swift */,
+				CEF228932222FE6F00F8C85E /* SettingsOutput.swift */,
+				CEF228952222FEA300F8C85E /* SettingsViewController.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		CEF228902222FE5000F8C85E /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEF228992222FF0900F8C85E /* SettingsConfiguration.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,11 +351,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF2288D2222F4A900F8C85E /* ProfilePresenter.swift in Sources */,
+				CEF228942222FE6F00F8C85E /* SettingsOutput.swift in Sources */,
 				CEF2288B2222F48000F8C85E /* ProfileConfiguration.swift in Sources */,
 				CECA89CB22229B5000B99C85 /* RegistrationOutput.swift in Sources */,
 				CECA89D222229F3200B99C85 /* DataManager.swift in Sources */,
+				CEF228922222FE6400F8C85E /* SettingsInput.swift in Sources */,
 				CEF228872222F41F00F8C85E /* ProfileInput.swift in Sources */,
+				CEF2289A2222FF0900F8C85E /* SettingsConfiguration.swift in Sources */,
+				CEF228982222FEE000F8C85E /* SettingsPresenter.swift in Sources */,
 				CECA89C722229AD600B99C85 /* LoginOutput.swift in Sources */,
+				CEF228962222FEA300F8C85E /* SettingsViewController.swift in Sources */,
 				CECA89C322229AA500B99C85 /* RegistrationPresenter.swift in Sources */,
 				CEF2287D2222D0CC00F8C85E /* LoginConfiguration.swift in Sources */,
 				CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */,
