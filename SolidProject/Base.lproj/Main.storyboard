@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="844" y="-738.08095952023996"/>
         </scene>
-        <!--Registration-->
+        <!--View Controller-->
         <scene sceneID="tmD-rf-ijD">
             <objects>
                 <viewController id="pO2-x2-7HJ" customClass="RegistrationViewController" customModule="SolidProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -234,13 +234,29 @@
                         <viewLayoutGuide key="safeArea" id="SnJ-nX-0AY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="dD2-Pd-Oni">
-                        <barButtonItem key="rightBarButtonItem" title="save" id="R6l-zH-1i6"/>
+                        <barButtonItem key="rightBarButtonItem" title="save" id="R6l-zH-1i6">
+                            <connections>
+                                <action selector="btnSave:" destination="pO2-x2-7HJ" id="Jde-Eu-Ueh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="ZuI-lM-SZr" id="yd1-yW-0W0"/>
+                        <outlet property="tiBday" destination="M5Q-cj-ue6" id="9KY-tX-67a"/>
+                        <outlet property="tiLogin" destination="0QN-l1-0Zj" id="3s6-cj-3XH"/>
+                        <outlet property="tiMail" destination="lPo-ht-bbN" id="q8i-yr-Zol"/>
+                        <outlet property="tiName" destination="Blm-Mq-vVl" id="wte-3g-P1q"/>
+                        <outlet property="tiPassword" destination="gSm-NV-8Q3" id="Gyv-Id-bpF"/>
+                        <outlet property="tiRepeatPassword" destination="YqA-TH-i5k" id="B6e-kL-F3B"/>
+                        <outlet property="tiSurname" destination="cuT-YM-HTe" id="t5o-yq-0z8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpF-em-N2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="0wS-mF-W1y" customClass="RegistrationConfigurator" customModule="SolidProject" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="pO2-x2-7HJ" id="6xm-hc-912"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1692.753623188406" y="-1013.3152173913044"/>
         </scene>

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+
 open class BaseViewController: UIViewController {
     
     @IBOutlet weak open var scrollView: UIScrollView!
+    
+    /// строки
+    var strings: Strings! = nil
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +53,23 @@ open class BaseViewController: UIViewController {
     @objc
     func keyboardWillHide(){
         scrollView.contentInset.bottom = 0
+    }
+    
+    // MARK: - сообщения
+    
+    /// Методя печатающий сообщения для разработчиков
+    ///
+    /// - Parameter text: сообщение, String
+    func printMessage(text: String?) {
+        print(text!)
+    }
+    
+    /// отображение алерт диалога
+    ///
+    /// - Parameter text: текст сообщения
+    func showMessage(text: String?) {
+        let alert = UIAlertController(title: strings.alert_title, message: text, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: strings.alert_ok, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
