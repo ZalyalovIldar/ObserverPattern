@@ -24,6 +24,8 @@
 		CECA89CD22229E1C00B99C85 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89CC22229E1C00B99C85 /* Strings.swift */; };
 		CECA89CF22229EA500B99C85 /* RegistrationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89CE22229EA500B99C85 /* RegistrationConfigurator.swift */; };
 		CECA89D222229F3200B99C85 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89D122229F3200B99C85 /* DataManager.swift */; };
+		CEF2287D2222D0CC00F8C85E /* LoginConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2287C2222D0CC00F8C85E /* LoginConfiguration.swift */; };
+		CEF228802222D76800F8C85E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2287F2222D76800F8C85E /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CECA89CC22229E1C00B99C85 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CECA89CE22229EA500B99C85 /* RegistrationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationConfigurator.swift; sourceTree = "<group>"; };
 		CECA89D122229F3200B99C85 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CEF2287C2222D0CC00F8C85E /* LoginConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfiguration.swift; sourceTree = "<group>"; };
+		CEF2287F2222D76800F8C85E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,8 @@
 		7C4B9D0D221ACA6A00DED97D /* SolidProject */ = {
 			isa = PBXGroup;
 			children = (
-				CE38945822219AB200ACC48F /* configurators */,
-				CE872D2A2222A69F00B28410 /* model */,
 				CECA89D022229F1A00B99C85 /* utils */,
-				CECA89BE2222944E00B99C85 /* base */,
+				CE38945822219AB200ACC48F /* configurators */,
 				CE38945722219AAD00ACC48F /* ui */,
 				CE38945622219AA300ACC48F /* presenters */,
 				7C4B9D12221ACA6A00DED97D /* Main.storyboard */,
@@ -96,6 +98,8 @@
 		CE38945622219AA300ACC48F /* presenters */ = {
 			isa = PBXGroup;
 			children = (
+				CEF228822222F3AD00F8C85E /* profile */,
+				CEF2287E2222D75A00F8C85E /* login */,
 				CECA89C122229A9100B99C85 /* registration */,
 			);
 			path = presenters;
@@ -104,6 +108,7 @@
 		CE38945722219AAD00ACC48F /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CEF228812222F3A500F8C85E /* profile */,
 				CECA89BB2222940000B99C85 /* login */,
 				CE4834462221FE0900BCE19E /* registration */,
 			);
@@ -113,6 +118,8 @@
 		CE38945822219AB200ACC48F /* configurators */ = {
 			isa = PBXGroup;
 			children = (
+				CEF228832222F3B900F8C85E /* profile */,
+				CEF2287B2222D0B500F8C85E /* login */,
 				CECA89D32222A0E100B99C85 /* registration */,
 			);
 			path = configurators;
@@ -165,6 +172,8 @@
 		CECA89D022229F1A00B99C85 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				CECA89BE2222944E00B99C85 /* base */,
+				CE872D2A2222A69F00B28410 /* model */,
 				CE48344A2222016F00BCE19E /* Extensions.swift */,
 				CECA89CC22229E1C00B99C85 /* Strings.swift */,
 				CECA89D122229F3200B99C85 /* DataManager.swift */,
@@ -178,6 +187,43 @@
 				CECA89CE22229EA500B99C85 /* RegistrationConfigurator.swift */,
 			);
 			path = registration;
+			sourceTree = "<group>";
+		};
+		CEF2287B2222D0B500F8C85E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2287C2222D0CC00F8C85E /* LoginConfiguration.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		CEF2287E2222D75A00F8C85E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2287F2222D76800F8C85E /* LoginPresenter.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		CEF228812222F3A500F8C85E /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		CEF228822222F3AD00F8C85E /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		CEF228832222F3B900F8C85E /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +300,12 @@
 				CECA89D222229F3200B99C85 /* DataManager.swift in Sources */,
 				CECA89C722229AD600B99C85 /* LoginOutput.swift in Sources */,
 				CECA89C322229AA500B99C85 /* RegistrationPresenter.swift in Sources */,
+				CEF2287D2222D0CC00F8C85E /* LoginConfiguration.swift in Sources */,
 				CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */,
 				CECA89C922229B4500B99C85 /* RegistrationInput.swift in Sources */,
 				7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */,
 				7C4B9D0F221ACA6A00DED97D /* AppDelegate.swift in Sources */,
+				CEF228802222D76800F8C85E /* LoginPresenter.swift in Sources */,
 				CE872D2C2222A6B100B28410 /* User.swift in Sources */,
 				CECA89C522229AC700B99C85 /* LoginInput.swift in Sources */,
 				CECA89CF22229EA500B99C85 /* RegistrationConfigurator.swift in Sources */,

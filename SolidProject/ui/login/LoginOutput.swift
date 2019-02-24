@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginOutput {
     
+    func didEnterPressed(login: String, password: String)
 }

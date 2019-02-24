@@ -10,7 +10,7 @@ import UIKit
 
 class RegistrationViewController: BaseViewController, RegistrationInput {
     
-    var presenter: RegistrationOutput!
+    var presenter: RegistrationOutput! = nil
     
     @IBOutlet weak var tiLogin: UITextField!
     @IBOutlet weak var tiPassword: UITextField!
