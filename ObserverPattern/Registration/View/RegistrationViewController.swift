@@ -15,24 +15,48 @@ class RegistrationViewController: UIViewController, RegistrationViewInput {
     
     /// Login text field
     @IBOutlet weak var loginTextField: UITextField!
+   
+    /// Login label
+    @IBOutlet weak var loginLabel: UILabel!
     
     /// Password text field
     @IBOutlet weak var passwordTextField: UITextField!
     
+    /// Password label
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     /// Confirm password text field
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    /// Confirm password label
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
     
     /// Name text field
     @IBOutlet weak var nameTextField: UITextField!
     
+    /// Name label
+    @IBOutlet weak var nameLabel: UILabel!
+    
     /// Surname text field
     @IBOutlet weak var surnameTextField: UITextField!
+    
+    /// Surname label
+    @IBOutlet weak var surnameLabel: UILabel!
     
     /// Birthday text field
     @IBOutlet weak var birthdayTextField: UITextField!
     
+    /// Birthday label
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
     /// Email text field
     @IBOutlet weak var emailTextField: UITextField!
+    
+    /// Email label
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    /// Registrate button
+    @IBOutlet weak var registrateButton: UIButton!
     
     /// Registration presenter
     var registrationPresenter: RegistrationViewOutput!
@@ -104,21 +128,45 @@ class RegistrationViewController: UIViewController, RegistrationViewInput {
             
             view.backgroundColor = UIColor.black
             
-            loginButton.backgroundColor = UIColor.red
             registrateButton.backgroundColor = UIColor.red
             
             loginLabel.textColor = UIColor.white
             passwordLabel.textColor = UIColor.white
+            confirmPasswordLabel.textColor = UIColor.white
+            nameLabel.textColor = UIColor.white
+            surnameLabel.textColor = UIColor.white
+            birthdayLabel.textColor = UIColor.white
+            emailLabel.textColor = UIColor.white
             
-        } else {
+            loginTextField.backgroundColor = UIColor.gray
+            passwordTextField.backgroundColor = UIColor.gray
+            confirmPasswordTextField.backgroundColor = UIColor.gray
+            nameTextField.backgroundColor = UIColor.gray
+            surnameTextField.backgroundColor = UIColor.gray
+            birthdayTextField.backgroundColor = UIColor.gray
+            emailTextField.backgroundColor = UIColor.gray
+        }
+        else {
             
             view.backgroundColor = UIColor.white
             
-            loginButton.backgroundColor = UIColor.blue
             registrateButton.backgroundColor = UIColor.blue
             
             loginLabel.textColor = UIColor.black
             passwordLabel.textColor = UIColor.black
+            confirmPasswordLabel.textColor = UIColor.black
+            nameLabel.textColor = UIColor.black
+            surnameLabel.textColor = UIColor.black
+            birthdayLabel.textColor = UIColor.black
+            emailLabel.textColor = UIColor.black
+            
+            loginTextField.backgroundColor = UIColor.white
+            passwordTextField.backgroundColor = UIColor.white
+            confirmPasswordTextField.backgroundColor = UIColor.white
+            nameTextField.backgroundColor = UIColor.white
+            surnameTextField.backgroundColor = UIColor.white
+            birthdayTextField.backgroundColor = UIColor.white
+            emailTextField.backgroundColor = UIColor.white
         }
     }
     

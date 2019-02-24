@@ -13,12 +13,6 @@
         <!--View Controller-->
         <scene sceneID="5ns-lR-Vf0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CSI-UY-v2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="2fZ-h4-6Ho" customClass="SettingsModuleConfigurator" customModule="ObserverPattern" customModuleProvider="target">
-                    <connections>
-                        <outlet property="viewController" destination="a3b-Dp-PXh" id="BXL-dB-rW1"/>
-                    </connections>
-                </customObject>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a3b-Dp-PXh" customClass="SettingsViewController" customModule="ObserverPattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oAu-je-fmT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -73,6 +67,12 @@
                         <outlet property="switchColorTheme" destination="5DO-iC-z4u" id="ubx-sI-auH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSI-UY-v2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="2fZ-h4-6Ho" customClass="SettingsModuleConfigurator" customModule="ObserverPattern" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="a3b-Dp-PXh" id="BXL-dB-rW1"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1737" y="748"/>
         </scene>
@@ -90,7 +90,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-q7-FtC">
                                         <rect key="frame" x="30" y="50" width="315" height="286"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZ3-2M-yIb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="XZ3-2M-yIb">
                                                 <rect key="frame" x="107.5" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Q1z-PA-r0c"/>
@@ -106,7 +106,6 @@
                                                             <constraint firstAttribute="height" constant="25" id="2oI-Nr-Cci"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsg-0X-2eF">
@@ -115,7 +114,6 @@
                                                             <constraint firstAttribute="height" constant="25" id="mdw-Sm-iER"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-uY-BQO">
@@ -124,7 +122,6 @@
                                                             <constraint firstAttribute="height" constant="25" id="0oA-eq-kLN"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -135,7 +132,6 @@
                                                     <constraint firstAttribute="height" constant="35" id="g1M-lb-6tm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -614,13 +610,21 @@
                     <navigationItem key="navigationItem" id="XmK-Ob-13s"/>
                     <size key="freeformSize" width="375" height="830"/>
                     <connections>
+                        <outlet property="birthdayLabel" destination="6AC-nE-HtX" id="9YL-3X-Da2"/>
                         <outlet property="birthdayTextField" destination="D1x-wc-lzn" id="ouY-Gd-wtY"/>
+                        <outlet property="confirmPasswordLabel" destination="1uQ-eG-354" id="KhZ-94-s29"/>
                         <outlet property="confirmPasswordTextField" destination="7va-3O-rKA" id="unM-6w-c1W"/>
+                        <outlet property="emailLabel" destination="vfS-lq-MFP" id="3Zf-jc-HcV"/>
                         <outlet property="emailTextField" destination="yw9-l9-K7v" id="cO8-5y-z26"/>
+                        <outlet property="loginLabel" destination="4RW-Ad-lke" id="sR2-f2-M06"/>
                         <outlet property="loginTextField" destination="HuH-Q6-wCn" id="tck-Fg-g5j"/>
+                        <outlet property="nameLabel" destination="9e3-Bh-roa" id="vdi-ju-V2w"/>
                         <outlet property="nameTextField" destination="5dY-lx-nSK" id="H1C-1z-bdo"/>
+                        <outlet property="passwordLabel" destination="hra-GC-RVL" id="biu-cj-Ss0"/>
                         <outlet property="passwordTextField" destination="Km7-iu-sLz" id="60b-Fw-TR3"/>
+                        <outlet property="registrateButton" destination="MhY-qB-oqL" id="d3c-50-nP9"/>
                         <outlet property="scrollView" destination="6ib-Uc-5rz" id="W5a-jP-Vok"/>
+                        <outlet property="surnameLabel" destination="y1b-3L-4lr" id="UUo-R9-g37"/>
                         <outlet property="surnameTextField" destination="JrW-iW-Bk1" id="wPq-tk-bVv"/>
                     </connections>
                 </viewController>
@@ -654,6 +658,7 @@
     </scenes>
     <resources>
         <image name="avatar" width="18" height="18"/>
+        <image name="profileAvatar" width="405.09890747070312" height="405.09890747070312"/>
         <image name="settings" width="18" height="18"/>
     </resources>
 </document>
