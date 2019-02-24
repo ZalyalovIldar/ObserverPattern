@@ -19,7 +19,7 @@ class LoginPresenter: LoginOutput {
             view.showMessage(text: strings.error_field_empty)
             return
         }
-        let user = dataManager.getUserByName(login: login)
+        let user = dataManager.getUserByLogin(login: login)
         if user == nil {
             view.showMessage(text: strings.error_no_users)
             return

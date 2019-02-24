@@ -43,5 +43,7 @@ class RegistrationPresenter: RegistrationOutput {
         //обновляем бд
         users.append(user)
         dataManager.saveUser(user: users)
+        
+        view.openProfileScreen(user: user)
     }
 }

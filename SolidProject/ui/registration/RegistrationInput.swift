@@ -13,4 +13,6 @@ protocol RegistrationInput: AnyObject {
     //отображение сообщений
     func showMessage(text: String?)
     func printMessage(text: String?)
+    
+    func openProfileScreen(user: User)
 }

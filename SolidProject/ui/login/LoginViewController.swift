@@ -22,6 +22,9 @@ class LoginViewController: BaseViewController, LoginInput {
     }
     
     func showProfile(user: User) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileScreen") as! ProfileViewController; // MySecondSecreen the storyboard ID
+        vc.user = user
+        self.present(vc, animated: true, completion: nil);
     }
 }

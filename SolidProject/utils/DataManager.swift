@@ -12,7 +12,7 @@ protocol DataManagerProtocol {
     
     func saveUser(user: [User])
     
-    func getUserByName(login: String) -> User?
+    func getUserByLogin(login: String) -> User?
     
     func getAllUsers() -> [User]?
     
@@ -41,7 +41,7 @@ class DataManager: DataManagerProtocol {
         UserDefaults.standard.synchronize()
     }
     
-    func getUserByName(login: String) -> User? {
+    func getUserByLogin(login: String) -> User? {
         let allUsers = getAllUsers()
         if allUsers != nil {
             for user in allUsers! {

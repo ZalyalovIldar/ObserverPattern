@@ -24,6 +24,13 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
         super.viewDidLoad()
     }
     
+    func openProfileScreen(user: User) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileScreen") as! ProfileViewController; // MySecondSecreen the storyboard ID
+        vc.user = user
+        self.present(vc, animated: true, completion: nil);
+    }
+    
     @IBAction func btnSave(_ sender: Any) {
         presenter.didSavePressed(login: tiLogin.text!, password: tiPassword.text!, repeatPass: tiRepeatPassword.text!, name: tiName.text!, surname: tiSurname.text!, bDay: tiBday.text!, mail: tiMail.text!)
     }
