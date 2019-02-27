@@ -12,8 +12,8 @@ protocol AuthorizationRouterInput: AnyObject {
     
     /// Показать алерт
     ///
-    /// - Parameter text: текст алерта
-    func showAlert(text: String)
+    /// - Parameter message: текст алерта
+    func showAlert(_ message: String?)
     
     /// Показать аккаунт пользователя
     ///

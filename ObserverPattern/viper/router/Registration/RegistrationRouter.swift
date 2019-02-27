@@ -17,11 +17,15 @@ class RegistrationRouter: RegistrationRouterInput {
     let accountIdentifier = "account"
     /// Имя сториборда
     let main = "Main"
+    /// alert
+    let alert = "Alert"
+    /// ok alert
+    let ok = "Ok"
     
     func showAlert(_ message: String?) {
         
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: self.alert, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: self.ok, style: .default, handler: nil)
         alert.addAction(okButton)
         
         view.present(alert, animated: true, completion: nil)

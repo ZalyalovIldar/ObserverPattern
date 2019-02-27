@@ -39,7 +39,7 @@ class AuthorizationPresenter: AuthorizationViewOutput, AuthorizationInteractorOu
     ///
     /// - Parameter text: текст алерта
     func showAlert(text: String) {
-        router.showAlert(text: text)
+        router.showAlert(text)
     }
     
     /// Показать вью регистации

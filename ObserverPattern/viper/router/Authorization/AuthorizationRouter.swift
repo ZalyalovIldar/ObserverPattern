@@ -19,19 +19,20 @@ class AuthorizationRouter: AuthorizationRouterInput {
     let account = "account"
     /// название сториборда
     let main = "Main"
-    
-    func showAlert(text: String) {
+    /// alert
+    let alert = "Alert"
+    /// ok alert
+    let ok = "Ok"
         
-        func showAlert(_ message: String?) {
-            
-            let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alert.addAction(okButton)
-            
-            view.present(alert, animated: true, completion: nil)
-        }
+    func showAlert(_ message: String?) {
+        
+        let alert = UIAlertController(title: self.alert, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: self.ok, style: .default, handler: nil)
+        alert.addAction(okButton)
+        
+        view.present(alert, animated: true, completion: nil)
     }
-    
+
     func showRegistrationView() {
         
         let mainStoryboard = UIStoryboard(name: main, bundle: nil)
