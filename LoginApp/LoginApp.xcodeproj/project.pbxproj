@@ -17,7 +17,6 @@
 		1B45C56C2222998B00A6DAFC /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C56B2222998B00A6DAFC /* ProfileConfigurator.swift */; };
 		1B45C56E2222A60300A6DAFC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C56D2222A60300A6DAFC /* Extensions.swift */; };
 		1B45C5702222A70B00A6DAFC /* SettingsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C56F2222A70B00A6DAFC /* SettingsViewOutput.swift */; };
-		1B45C5722222A71900A6DAFC /* SettingsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C5712222A71900A6DAFC /* SettingsViewInput.swift */; };
 		1B45C5762222A76F00A6DAFC /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C5752222A76F00A6DAFC /* SettingsPresenter.swift */; };
 		1B45C5782222AA8B00A6DAFC /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C5772222AA8B00A6DAFC /* SettingsConfigurator.swift */; };
 		1B45C57A2222AFB900A6DAFC /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C5792222AFB900A6DAFC /* LoginViewInput.swift */; };
@@ -48,7 +47,6 @@
 		1B45C56B2222998B00A6DAFC /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		1B45C56D2222A60300A6DAFC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1B45C56F2222A70B00A6DAFC /* SettingsViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewOutput.swift; sourceTree = "<group>"; };
-		1B45C5712222A71900A6DAFC /* SettingsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewInput.swift; sourceTree = "<group>"; };
 		1B45C5752222A76F00A6DAFC /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		1B45C5772222AA8B00A6DAFC /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
 		1B45C5792222AFB900A6DAFC /* LoginViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				1BF9508D221FE7B0006D9E2B /* SettingsViewController.swift */,
 				1B45C56F2222A70B00A6DAFC /* SettingsViewOutput.swift */,
-				1B45C5712222A71900A6DAFC /* SettingsViewInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,7 +312,6 @@
 				1B45C5762222A76F00A6DAFC /* SettingsPresenter.swift in Sources */,
 				1BF9508A221FE77E006D9E2B /* RegisterViewController.swift in Sources */,
 				1B45C55B222280AF00A6DAFC /* RegisterViewOutput.swift in Sources */,
-				1B45C5722222A71900A6DAFC /* SettingsViewInput.swift in Sources */,
 				1B45C57A2222AFB900A6DAFC /* LoginViewInput.swift in Sources */,
 				1BF9508E221FE7B0006D9E2B /* SettingsViewController.swift in Sources */,
 				1B45C5842222B81F00A6DAFC /* NotificationsManager.swift in Sources */,

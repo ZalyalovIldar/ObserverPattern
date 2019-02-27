@@ -15,5 +15,4 @@ protocol ProfileViewOutput: AnyObject {
     ///
     /// - Parameter sender: User's account
     func sendUser(_ sender: Account)
-    
 }

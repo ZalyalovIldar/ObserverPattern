@@ -10,8 +10,10 @@ import Foundation
 
 class RegisterPresenter: RegisterViewOutput {
     
-    
     weak var view: RegisterViewInput!
+    
+    let userCreatedError = "User already created"
+    let incorrectData = "Incorrect login or password"
     
     func registerNewAccount(login: String,
                             password: String,
@@ -23,9 +25,7 @@ class RegisterPresenter: RegisterViewOutput {
                             phoneNumber: String) {
         
         if UserDefaults.standard.data(forKey: login) != nil {
-            
-            view.setStatus("User already created")
-        
+            view.setStatus(userCreatedError)
         } else if password == repeatedPassword &&
             login != "" &&
             password != "" {
@@ -50,12 +50,11 @@ class RegisterPresenter: RegisterViewOutput {
                 let archiver = NSKeyedArchiver.archivedData(withRootObject: newAccount)
                     UserDefaults.standard.set(archiver, forKey: newAccount.login)
                     UserDefaults.standard.synchronize()
-            }
+                }
             } catch let error {
                 print(error)
             }
            view.popViewController()
-        } else { view.setStatus("Incorrect login or password")}
+        } else { view.setStatus(incorrectData)}
     }
-    
 }

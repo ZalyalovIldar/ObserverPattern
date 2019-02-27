@@ -19,6 +19,4 @@ class SettingsPresenter: SettingsViewOutput {
         
         notificationCenter.post(name: .blackTheme, object: view , userInfo: dict)
     }
-    
-    
 }

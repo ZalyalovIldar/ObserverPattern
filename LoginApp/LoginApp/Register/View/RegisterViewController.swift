@@ -34,7 +34,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    let notificationCenter = NotificationCenter.default
+    var notificationCenter: NotificationCenter!
     var notoficationManager: NotificationManager!
     var presenter: RegisterViewOutput!
     
@@ -59,7 +59,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
     }
     
     deinit {
-        
         notificationCenter.removeObserver(self)
     }
     
@@ -67,7 +66,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
     ///when keyboard show
     /// - Parameter notification: notification
     @objc func keyboardWillShow(notification: NSNotification) {
-        
         notoficationManager.registerKeyboardShow(notification: notification)
     }
     
@@ -82,7 +80,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
     /// set register profile blaack theme
     /// - Parameter notification: notification
     @objc func setRegisterBlackTheme(notification: NSNotification) {
-        
         notoficationManager.registerBlackTheme(notification: notification)
     }
     
@@ -91,13 +88,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
     }
     
     func setStatus(_ text: String) {
-        
-        registrationStatusLabel.text = text
+         registrationStatusLabel.text = text
     }
     
     
     
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        
         self.loginTextField.endEditing(true)
         self.passwordTextField.endEditing(true)
         self.repeatedPasswordTextField.endEditing(true)
@@ -108,7 +105,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
         self.phoneNumberTextField.endEditing(true)
         return true
     }
-    
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         
@@ -121,10 +117,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, RegisterVie
         let emailString            = emailTextField.text!
         let phoneNumberString      = phoneNumberTextField.text!
         
-        
-        presenter.registerNewAccount(login: loginString, password: passwordString, repeatedPassword: repeatedPasswordString, name: nameString, secName: secNameString, email: emailString, yearOfBirth: birthYearString, phoneNumber: phoneNumberString)
+        presenter.registerNewAccount(login: loginString,
+                                     password: passwordString,
+                                     repeatedPassword: repeatedPasswordString,
+                                     name: nameString,
+                                     secName: secNameString,
+                                     email: emailString,
+                                     yearOfBirth: birthYearString,
+                                     phoneNumber: phoneNumberString)
     }
-    
 }
     
 

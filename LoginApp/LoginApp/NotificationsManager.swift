@@ -52,7 +52,6 @@ class NotificationManager: NotificationManagerProtocol {
     var profileViewConroller: ProfileViewController!
     var registerViewController: RegisterViewController!
     
-    
     let notificationCenter = NotificationCenter.default
     
     func settingsBalckTheme(notification: NSNotification) {
@@ -120,6 +119,7 @@ class NotificationManager: NotificationManagerProtocol {
         }
 
     }
+    
     func profileBlackTheme(notification: NSNotification) {
         
         guard let blackThemeDict = notification.userInfo as? [String : Bool] else {return}
@@ -141,7 +141,6 @@ class NotificationManager: NotificationManagerProtocol {
             profileViewConroller.dateOfBirthLabelValue.textColor = .white
             profileViewConroller.phoneNumberLabel.textColor = .white
             profileViewConroller.phoneNumberLabelValue.textColor = .white
-            
         } else {
             
             profileViewConroller.view.backgroundColor? = .white
@@ -210,16 +209,17 @@ class NotificationManager: NotificationManagerProtocol {
     }
     
     func registerKeyboardShow(notification: NSNotification) {
+        
         if registerViewController.view.frame.origin.y == 0 {
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue{
             registerViewController.bottomConstraint.constant = keyboardSize.height
-                
             registerViewController.view.frame.origin.y -= 1
             }
         }
     }
     
     func registerKeyboardHide(notification: NSNotification) {
+        
         if registerViewController.view.frame.origin.y != 0 {
             registerViewController.view.frame.origin.y = 0
             registerViewController.bottomConstraint.constant = 10

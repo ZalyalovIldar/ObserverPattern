@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol Send {
-    
-    func setAcc()
-    
-}
-
 class ProfileViewController: UIViewController, ProfileViewInput {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -29,24 +23,22 @@ class ProfileViewController: UIViewController, ProfileViewInput {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var phoneNumberLabelValue: UILabel!
     
-    let notificationCenter = NotificationCenter.default
-    
+    var notificationCenter: NotificationCenter!
     var presenter: ProfileViewOutput!
     var notoficationManager: NotificationManager!
     var currentAccount: Account?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        notificationCenter.addObserver(self, selector: #selector(setProfileBlackTheme(notification:)), name: .blackTheme, object: nil)
+   }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         presenter.sendUser(currentAccount!)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        notificationCenter.addObserver(self, selector: #selector(setProfileBlackTheme(notification:)), name: .blackTheme, object: nil)
-        
-   }
     
     func setUserData(login: String, name: String, secondName: String, phone: String, email: String, yearOfBirth: String) {
         nameLabelValue.text = name
@@ -56,7 +48,6 @@ class ProfileViewController: UIViewController, ProfileViewInput {
         dateOfBirthLabelValue.text = yearOfBirth
         phoneNumberLabelValue.text = phone
     }
-    
     
     /// set profile view controller
     ///
@@ -70,6 +61,4 @@ class ProfileViewController: UIViewController, ProfileViewInput {
     deinit {
         notificationCenter.removeObserver(self)
     }
-    
-    
 }

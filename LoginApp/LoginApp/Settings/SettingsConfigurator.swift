@@ -25,15 +25,11 @@ class SettingsConfigurator: NSObject {
         
         let presenter = SettingsPresenter()
         let notificationManager: NotificationManager! = NotificationManager()
-        
+        let notificationCenter = NotificationCenter.default
         
         view.presenter = presenter
         view.notoficationManager = notificationManager
-        
-        
-        
-        
-        
+        view.notificationCenter = notificationCenter
     }
 }
 

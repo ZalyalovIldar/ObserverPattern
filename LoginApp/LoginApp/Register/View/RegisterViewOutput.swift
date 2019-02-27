@@ -30,5 +30,4 @@ protocol RegisterViewOutput: AnyObject {
                             email: String,
                             yearOfBirth: String,
                             phoneNumber: String)
-    
 }

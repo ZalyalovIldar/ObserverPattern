@@ -25,15 +25,13 @@ class RegisterConfigurator: NSObject {
         
         let presenter = RegisterPresenter()
         let notificationManager: NotificationManager! = NotificationManager()
-        
+        let notificationCenter = NotificationCenter.default
         
         view.presenter = presenter
         view.notoficationManager = notificationManager
+        view.notificationCenter = notificationCenter
         
         presenter.view = view
-        
-        
-        
     }
 }
 

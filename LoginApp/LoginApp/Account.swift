@@ -37,8 +37,6 @@ class Account: NSObject, NSCoding {
         self.dateOfBirth = dateOfBirth
     }
     
-    
-    
     func encode(with aCoder: NSCoder) {
         
         aCoder.encode(login, forKey: #keyPath(Account.login))
@@ -59,9 +57,6 @@ class Account: NSObject, NSCoding {
         phoneNumber = aDecoder.decodeObject(forKey: #keyPath(Account.phoneNumber)) as! String
         email       = aDecoder.decodeObject(forKey: #keyPath(Account.email)) as! String
         dateOfBirth = aDecoder.decodeObject(forKey: #keyPath(Account.dateOfBirth)) as! String
-        
-        
-        
-    }
     
+    }
 }

@@ -10,6 +10,10 @@ import Foundation
 
 class LoginPresenter: LoginViewOutput {
     
+    let identifier = "curAcc"
+    let wrongPasswordError = "Wrong password"
+    let notFoundUserError = "User not found"
+    
     weak var view: LoginViewInput!
    
     func loginUser(login: String, password: String) {
@@ -20,13 +24,13 @@ class LoginPresenter: LoginViewOutput {
                 guard let currentAccount  = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(currentAccountData)  as? Account else {return}
                 
                 if currentAccount.password == password {
-                    view.shoulPerfromSegue(withIdentifier: "curAcc", sender: currentAccount)
+                    view.shoulPerfromSegue(withIdentifier: identifier, sender: currentAccount)
                     view.clearAllTextFields()
-                } else {view.setStatusLabel("Wrong password") }
+                } else {view.setStatusLabel(wrongPasswordError) }
             }
             catch let error {
                 print(error)
             }
-        } else {view.setStatusLabel("User not found")}
+        } else {view.setStatusLabel(notFoundUserError)}
     }
 }

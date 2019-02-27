@@ -9,32 +9,25 @@
 import UIKit
 
 
-class SettingsViewController: UIViewController, SettingsViewInput {
+class SettingsViewController: UIViewController {
    
-    
-    
-    
     @IBOutlet weak var blackThemeSwitch: UISwitch!
     @IBOutlet weak var blackThemeLabel: UILabel!
     
-    let notificationCenter = NotificationCenter.default
+    var notificationCenter: NotificationCenter!
     var notoficationManager: NotificationManager!
     var presenter: SettingsViewOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notificationCenter.addObserver(self, selector: #selector(setSettingsBlackTheme(notification:)), name: .blackTheme, object: nil)
-        
-        
     }
-    
     
     @IBAction func blackThemeSwitched(_ sender: Any) {
        
         let isSwitched = blackThemeSwitch.isOn
         presenter.sendBlackThemeNotification(isOn: isSwitched)
-        
-    }
+     }
     
      /// set black theme for settings view controler
      /// used by notification center

@@ -13,8 +13,11 @@ class ProfilePresenter: ProfileViewOutput {
     weak var view: ProfileViewInput!
     
     func sendUser(_ sender: Account) {
-        view.setUserData(login: sender.login, name: sender.name, secondName: sender.secondName, phone: sender.phoneNumber, email: sender.email, yearOfBirth: sender.dateOfBirth)
+        view.setUserData(login: sender.login,
+                         name: sender.name,
+                         secondName: sender.secondName,
+                         phone: sender.phoneNumber,
+                         email: sender.email,
+                         yearOfBirth: sender.dateOfBirth)
     }
-    
-    
 }

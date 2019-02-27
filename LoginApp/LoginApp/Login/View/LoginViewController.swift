@@ -17,24 +17,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginViewInput
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var enteredStatusLabel: UILabel!
-   
-    let notificationCenter = NotificationCenter.default
+    
+    let identificator = "curAcc"
+    
+    var notificationCenter: NotificationCenter!
     var notoficationManager: NotificationManager!
     var presenter: LoginViewOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         loginTextField.delegate = self
+        loginTextField.delegate = self
         passwordTextField.delegate = self
         notificationCenter.addObserver(self, selector: #selector(setBlackTheme(notification:)), name: .blackTheme, object: nil)
     }
     
     deinit {
-       
-        notificationCenter.removeObserver(self)
+       notificationCenter.removeObserver(self)
     }
-
-
+    
     /// method for setting black theme and used by notifactioncenter
     ///
     /// - Parameter notification: notification
@@ -42,9 +42,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginViewInput
         notoficationManager.loginViewController = self
         notoficationManager.loginBlackTheme(notification: notification)
     }
+    
     func shoulPerfromSegue(withIdentifier: String, sender: Any?) {
         performSegue(withIdentifier: withIdentifier, sender: sender)
     }
+    
     func setStatusLabel(_ text: String) {
         enteredStatusLabel.text = text
     }
@@ -62,8 +64,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginViewInput
         clearString(&enteredStatusLabel.text!)
     }
     
-    
-    
    @IBAction func enterButtonPressed(_ sender: Any) {
     
         let enteredLoginString = loginTextField.text!
@@ -72,10 +72,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginViewInput
         presenter.loginUser(login: enteredLoginString, password: enteredPasswordString)
    }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "curAcc", let currentAccount = sender as? Account{
+        if segue.identifier == identificator, let currentAccount = sender as? Account{
             
             let destanationController = segue.destination as! ProfileViewController
             destanationController.currentAccount = currentAccount

@@ -25,14 +25,13 @@ class ProfileConfigurator: NSObject {
         
         let presenter = ProfilePresenter()
         let notificationManager: NotificationManager! = NotificationManager()
-        
+        let notificationCenter = NotificationCenter.default
         
         view.presenter = presenter
         view.notoficationManager = notificationManager
+        view.notificationCenter = notificationCenter
         
         presenter.view = view
-        
-        
-    }
+     }
 }
 
