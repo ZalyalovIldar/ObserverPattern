@@ -13,6 +13,7 @@
 		7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D20221ACAAA00DED97D /* NetManager.swift */; };
 		CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4834472221FE5600BCE19E /* RegistrationViewController.swift */; };
 		CE48344B2222016F00BCE19E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48344A2222016F00BCE19E /* Extensions.swift */; };
+		CE73049A22231B77005EF30C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73049922231B77005EF30C /* MainViewController.swift */; };
 		CE872D2C2222A6B100B28410 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE872D2B2222A6B100B28410 /* User.swift */; };
 		CECA89BD2222941100B99C85 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89BC2222941100B99C85 /* LoginViewController.swift */; };
 		CECA89C02222946100B99C85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA89BF2222946100B99C85 /* BaseViewController.swift */; };
@@ -47,6 +48,7 @@
 		7C4B9D20221ACAAA00DED97D /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		CE4834472221FE5600BCE19E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CE48344A2222016F00BCE19E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE73049922231B77005EF30C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE872D2B2222A6B100B28410 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CECA89BC2222941100B99C85 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CECA89BF2222946100B99C85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		CE38945722219AAD00ACC48F /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CE73049822231B64005EF30C /* main */,
 				CEF2288F2222FE4A00F8C85E /* settings */,
 				CEF228812222F3A500F8C85E /* profile */,
 				CECA89BB2222940000B99C85 /* login */,
@@ -156,6 +159,14 @@
 				CECA89CA22229B5000B99C85 /* RegistrationOutput.swift */,
 			);
 			path = registration;
+			sourceTree = "<group>";
+		};
+		CE73049822231B64005EF30C /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CE73049922231B77005EF30C /* MainViewController.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		CE872D2A2222A69F00B28410 /* model */ = {
@@ -357,6 +368,7 @@
 				CECA89D222229F3200B99C85 /* DataManager.swift in Sources */,
 				CEF228922222FE6400F8C85E /* SettingsInput.swift in Sources */,
 				CEF228872222F41F00F8C85E /* ProfileInput.swift in Sources */,
+				CE73049A22231B77005EF30C /* MainViewController.swift in Sources */,
 				CEF2289A2222FF0900F8C85E /* SettingsConfiguration.swift in Sources */,
 				CEF228982222FEE000F8C85E /* SettingsPresenter.swift in Sources */,
 				CECA89C722229AD600B99C85 /* LoginOutput.swift in Sources */,

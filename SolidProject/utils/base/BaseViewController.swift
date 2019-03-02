@@ -18,30 +18,25 @@ open class BaseViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        registerNotifications()
     }
     
-    open override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if scrollView != nil {
-            registerNotifications()
-        }
-    }
-    
-    open override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if scrollView != nil {
-            unregisterNotifications()
-        }
+    deinit {
+        printMessage(text: "deinited!!!!")
+        unregisterNotifications()
     }
     
     private func registerNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        if scrollView != nil {
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(changeColor), name: .changeColorNotification, object: nil)
     }
     
     private func unregisterNotifications() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc
@@ -71,5 +66,35 @@ open class BaseViewController: UIViewController {
         let alert = UIAlertController(title: strings.alert_title, message: text, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: strings.alert_ok, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc
+    func changeColor(notification: Notification) {
+        guard let colorDict = notification.userInfo as? [String: String]
+            else { return }
+        let color = colorDict["color"] ?? "white"
+        
+        if color == "black" {
+            changeIntoBlack()
+        } else {
+            changeIntoWhite()
+        }
+    }
+    
+    func changeIntoBlack(){
+    }
+    
+    func changeIntoWhite(){
+        view.backgroundColor = .gray
+        if scrollView != nil {
+            scrollView.backgroundColor = .white
+        }
+
+        self.tabBarController?.tabBar.barTintColor = UIColor.white
+
+        self.tabBarController?.tabBar.tintColor = UIColor.black
+        if #available(iOS 10.0, *) {
+            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
+        }
     }
 }

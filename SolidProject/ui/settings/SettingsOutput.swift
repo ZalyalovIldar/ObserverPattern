@@ -10,4 +10,5 @@ import Foundation
 
 protocol SettingsOutput {
     
+     func switchColor(index: Int) 
 }

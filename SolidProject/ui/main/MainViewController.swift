@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  MainViewController.swift
 //  SolidProject
 //
 //  Created by Тимур Бадретдинов on 24/02/2019.
@@ -8,29 +8,17 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController, LoginInput {
+class MainViewController: BaseViewController {
+
+    @IBOutlet weak var ttlNavigatinItem: UINavigationItem!
     
-    var presenter: LoginOutput! = nil
-    
-    @IBOutlet weak var tiLogin: UITextField!
-    @IBOutlet weak var tiPassword: UITextField!
-    
-    @IBOutlet weak var viewHolder: UIView!
-    
-    @IBAction func btnEnter(_ sender: Any) {
-        presenter.didEnterPressed(login: tiLogin.text!, password: tiPassword.text!)
-    }
-    
-    func showProfile(user: User) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileScreen") as! ProfileViewController; // MySecondSecreen the storyboard ID
-        vc.user = user
-        self.present(vc, animated: true, completion: nil);
-    }
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnRegistration: UIButton!
     
     override func changeIntoWhite() {
         view.backgroundColor = .white
-        viewHolder.backgroundColor = .white
+        btnLogin.setTitleColor(UIColor.blue, for: .normal)
+        btnRegistration.setTitleColor(UIColor.blue, for: .normal)
         
         
         self.tabBarController?.tabBar.barTintColor = UIColor.white
@@ -43,7 +31,8 @@ class LoginViewController: BaseViewController, LoginInput {
     
     override func changeIntoBlack() {
         view.backgroundColor = .gray
-        viewHolder.backgroundColor = .gray
+        btnLogin.setTitleColor(UIColor.white, for: .normal)
+        btnRegistration.setTitleColor(UIColor.white, for: .normal)
         
         self.tabBarController?.tabBar.barTintColor = UIColor.gray
         

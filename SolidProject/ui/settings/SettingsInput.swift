@@ -9,4 +9,9 @@
 import Foundation
 
 protocol SettingsInput: AnyObject {
+    
+    func changeIntoBlack()
+    
+    func changeIntoWhite()
+    
 }

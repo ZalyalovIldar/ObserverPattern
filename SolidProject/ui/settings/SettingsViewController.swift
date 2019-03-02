@@ -12,8 +12,35 @@ class SettingsViewController: BaseViewController, SettingsInput {
 
     var presenter: SettingsOutput! = nil
     
-    @IBOutlet weak var darkSelector: UISegmentedControl!
+//    override var viewController: UIViewController! = self
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func styleSwitch(_ sender: UISegmentedControl) {
+        presenter.switchColor(index: sender.selectedSegmentIndex)
+    }
+    
+    override func changeIntoBlack() {
+        view.backgroundColor = .gray
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.gray
+        
+        self.tabBarController?.tabBar.tintColor = UIColor.white
+        if #available(iOS 10.0, *) {
+            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
+        }
+    }
+    
+    override func changeIntoWhite() {
+        view.backgroundColor = .white
+        
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.white
+        
+        self.tabBarController?.tabBar.tintColor = UIColor.black
+        if #available(iOS 10.0, *) {
+            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
+        }
     }
 }

@@ -21,3 +21,7 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+extension Notification.Name {
+    static let changeColorNotification = NSNotification.Name.init("changeColorNotification")
+}

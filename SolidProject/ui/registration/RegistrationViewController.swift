@@ -20,6 +20,9 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
     @IBOutlet weak var tiBday: UITextField!
     @IBOutlet weak var tiMail: UITextField!
     
+    @IBOutlet weak var viewHolder: UIView!
+    @IBOutlet weak var test: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -33,5 +36,30 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
     
     @IBAction func btnSave(_ sender: Any) {
         presenter.didSavePressed(login: tiLogin.text!, password: tiPassword.text!, repeatPass: tiRepeatPassword.text!, name: tiName.text!, surname: tiSurname.text!, bDay: tiBday.text!, mail: tiMail.text!)
+    }
+    
+    override func changeIntoBlack() {
+        view.backgroundColor = .gray
+        viewHolder.backgroundColor = .gray
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.gray
+        
+        self.tabBarController?.tabBar.tintColor = UIColor.white
+        if #available(iOS 10.0, *) {
+            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
+        }
+    }
+
+    override func changeIntoWhite() {
+        view.backgroundColor = .white
+        viewHolder.backgroundColor = .white
+        
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.white
+        
+        self.tabBarController?.tabBar.tintColor = UIColor.black
+        if #available(iOS 10.0, *) {
+            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
+        }
     }
 }
