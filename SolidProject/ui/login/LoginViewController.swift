@@ -33,14 +33,24 @@ class LoginViewController: BaseViewController, LoginInput {
             destinationController.user = user
         }
     }
-    
-    override func changeIntoWhite() {
-        view.backgroundColor = .white
-        viewHolder.backgroundColor = .white        
+
+    override func changeIntoBlack() {
+        changeBackgroundColor(color: .gray)
+        changeKeyboardAppearence(style: .dark)
     }
     
-    override func changeIntoBlack() {
-        view.backgroundColor = .gray
-        viewHolder.backgroundColor = .gray
+    override func changeIntoWhite() {
+        changeBackgroundColor(color: .white)
+        changeKeyboardAppearence(style: .default)
+    }
+    
+    func changeBackgroundColor(color: UIColor) {
+        view.backgroundColor = color
+        viewHolder.backgroundColor = color
+    }
+    
+    func changeKeyboardAppearence(style: UIKeyboardAppearance)  {
+        tiLogin.keyboardAppearance = style
+        tiPassword.keyboardAppearance = style
     }
 }

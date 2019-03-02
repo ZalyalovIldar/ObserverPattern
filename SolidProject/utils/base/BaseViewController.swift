@@ -81,9 +81,7 @@ open class BaseViewController: UIViewController {
         }
     }
     
-    func changeIntoBlack(){
-    }
+    func changeIntoBlack(){}
     
-    func changeIntoWhite(){
-    }
+    func changeIntoWhite(){}
 }

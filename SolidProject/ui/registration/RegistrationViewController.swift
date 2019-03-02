@@ -45,12 +45,27 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
     }
     
     override func changeIntoBlack() {
-        view.backgroundColor = .gray
-        viewHolder.backgroundColor = .gray    
+        changeBackgroundColor(color: .gray)
+        changeKeyboardAppearence(style: .dark)
+    }
+    
+    override func changeIntoWhite() {
+        changeBackgroundColor(color: .white)        
+        changeKeyboardAppearence(style: .default)
+    }
+    
+    func changeBackgroundColor(color: UIColor) {
+        view.backgroundColor = color
+        viewHolder.backgroundColor = color
     }
 
-    override func changeIntoWhite() {
-        view.backgroundColor = .white
-        viewHolder.backgroundColor = .white
+    func changeKeyboardAppearence(style: UIKeyboardAppearance)  {
+        tiLogin.keyboardAppearance = style
+        tiPassword.keyboardAppearance = style
+        tiRepeatPassword.keyboardAppearance = style
+        tiName.keyboardAppearance = style
+        tiSurname.keyboardAppearance = style
+        tiBday.keyboardAppearance = style
+        tiMail.keyboardAppearance = style
     }
 }

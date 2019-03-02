@@ -17,14 +17,16 @@ class MainViewController: BaseViewController {
     
     override func changeIntoWhite() {
         view.backgroundColor = .white
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.barStyle = .default
+        
         btnLogin.setTitleColor(UIColor.blue, for: .normal)
         btnRegistration.setTitleColor(UIColor.blue, for: .normal)        
     }
     
     override func changeIntoBlack() {
         view.backgroundColor = .gray
-        navigationController?.navigationBar.barTintColor = UIColor.gray
+        navigationController?.navigationBar.barStyle = .black
+        
         btnLogin.setTitleColor(UIColor.white, for: .normal)
         btnRegistration.setTitleColor(UIColor.white, for: .normal)
     }

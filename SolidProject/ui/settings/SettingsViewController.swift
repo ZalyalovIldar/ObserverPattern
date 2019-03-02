@@ -24,25 +24,12 @@ class SettingsViewController: BaseViewController, SettingsInput {
     override func changeIntoBlack() {
         view.backgroundColor = .gray
         
-        self.tabBarController?.tabBar.barTintColor = UIColor.gray
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.white
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
-        }
-        
-        navigationController?.navigationBar.barTintColor = UIColor.gray
+        self.tabBarController?.tabBar.barStyle = .black
     }
     
     override func changeIntoWhite() {
         view.backgroundColor = .white
         
-        
-        self.tabBarController?.tabBar.barTintColor = UIColor.white
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.black
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
-        }
+        self.tabBarController?.tabBar.barStyle = .default
     }
 }
