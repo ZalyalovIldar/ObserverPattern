@@ -10,7 +10,6 @@
 		7C4B9D0F221ACA6A00DED97D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D0E221ACA6A00DED97D /* AppDelegate.swift */; };
 		7C4B9D14221ACA6A00DED97D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D12221ACA6A00DED97D /* Main.storyboard */; };
 		7C4B9D16221ACA6B00DED97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B9D15221ACA6B00DED97D /* Assets.xcassets */; };
-		7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B9D20221ACAAA00DED97D /* NetManager.swift */; };
 		CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4834472221FE5600BCE19E /* RegistrationViewController.swift */; };
 		CE48344B2222016F00BCE19E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48344A2222016F00BCE19E /* Extensions.swift */; };
 		CE73049A22231B77005EF30C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73049922231B77005EF30C /* MainViewController.swift */; };
@@ -45,7 +44,6 @@
 		7C4B9D13221ACA6A00DED97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C4B9D15221ACA6B00DED97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4B9D1A221ACA6B00DED97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C4B9D20221ACAAA00DED97D /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		CE4834472221FE5600BCE19E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CE48344A2222016F00BCE19E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CE73049922231B77005EF30C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				7C4B9D0E221ACA6A00DED97D /* AppDelegate.swift */,
 				7C4B9D15221ACA6B00DED97D /* Assets.xcassets */,
 				7C4B9D1A221ACA6B00DED97D /* Info.plist */,
-				7C4B9D20221ACAAA00DED97D /* NetManager.swift */,
 			);
 			path = SolidProject;
 			sourceTree = "<group>";
@@ -378,7 +375,6 @@
 				CE4834482221FE5600BCE19E /* RegistrationViewController.swift in Sources */,
 				CEF228852222F40300F8C85E /* ProfileViewController.swift in Sources */,
 				CECA89C922229B4500B99C85 /* RegistrationInput.swift in Sources */,
-				7C4B9D21221ACAAA00DED97D /* NetManager.swift in Sources */,
 				7C4B9D0F221ACA6A00DED97D /* AppDelegate.swift in Sources */,
 				CEF228802222D76800F8C85E /* LoginPresenter.swift in Sources */,
 				CEF228892222F42700F8C85E /* ProfileOutput.swift in Sources */,

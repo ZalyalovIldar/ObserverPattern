@@ -263,6 +263,7 @@
                         <outlet property="tiRepeatPassword" destination="YqA-TH-i5k" id="B6e-kL-F3B"/>
                         <outlet property="tiSurname" destination="cuT-YM-HTe" id="t5o-yq-0z8"/>
                         <outlet property="viewHolder" destination="w0i-TH-TUZ" id="K5s-Lk-YnW"/>
+                        <segue destination="SXj-e7-g9Z" kind="show" identifier="regProfileSegue" id="aAU-b0-Xji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpF-em-N2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,6 +405,7 @@
                         <outlet property="tiLogin" destination="p3Q-c3-fJH" id="S4y-cG-fEd"/>
                         <outlet property="tiPassword" destination="ulH-u7-Z2e" id="ZcT-GX-fNZ"/>
                         <outlet property="viewHolder" destination="d3f-b1-yDP" id="Ei7-35-apA"/>
+                        <segue destination="SXj-e7-g9Z" kind="show" identifier="logProfileSegue" id="Nxd-tF-I1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSu-pp-6lY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,7 +426,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXw-2D-5xc">
-                                <rect key="frame" x="0.0" y="12" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="631"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-r6-Rnx">
                                         <rect key="frame" x="31" y="48" width="352" height="228"/>
@@ -497,7 +499,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq9-Zg-ZMF">
-                                                        <rect key="frame" x="0.0" y="11.666666666666684" width="54.333333333333336" height="31.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="11.666666666666627" width="54.333333333333336" height="31.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -565,4 +567,7 @@
     <resources>
         <image name="avatar" width="577" height="593"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nxd-tF-I1K"/>
+    </inferredMetricsTieBreakers>
 </document>

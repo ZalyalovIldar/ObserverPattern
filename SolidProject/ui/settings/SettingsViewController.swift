@@ -30,6 +30,8 @@ class SettingsViewController: BaseViewController, SettingsInput {
         if #available(iOS 10.0, *) {
             self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
         }
+        
+        navigationController?.navigationBar.barTintColor = UIColor.gray
     }
     
     override func changeIntoWhite() {

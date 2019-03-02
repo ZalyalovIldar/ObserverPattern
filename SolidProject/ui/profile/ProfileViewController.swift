@@ -32,4 +32,12 @@ class ProfileViewController: BaseViewController, ProfileInput {
         tvBDay.text = user.bDay
         tvMail.text = user.mail
     }
+    
+    override func changeIntoBlack() {
+        view.backgroundColor = .gray
+    }
+    
+    override func changeIntoWhite() {
+        view.backgroundColor = .white
+    }
 }

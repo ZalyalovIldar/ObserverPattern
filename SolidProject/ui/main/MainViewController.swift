@@ -17,28 +17,15 @@ class MainViewController: BaseViewController {
     
     override func changeIntoWhite() {
         view.backgroundColor = .white
+        navigationController?.navigationBar.barTintColor = UIColor.white
         btnLogin.setTitleColor(UIColor.blue, for: .normal)
-        btnRegistration.setTitleColor(UIColor.blue, for: .normal)
-        
-        
-        self.tabBarController?.tabBar.barTintColor = UIColor.white
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.black
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
-        }
+        btnRegistration.setTitleColor(UIColor.blue, for: .normal)        
     }
     
     override func changeIntoBlack() {
         view.backgroundColor = .gray
+        navigationController?.navigationBar.barTintColor = UIColor.gray
         btnLogin.setTitleColor(UIColor.white, for: .normal)
         btnRegistration.setTitleColor(UIColor.white, for: .normal)
-        
-        self.tabBarController?.tabBar.barTintColor = UIColor.gray
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.white
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
-        }
     }
 }

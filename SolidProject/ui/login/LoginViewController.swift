@@ -17,39 +17,30 @@ class LoginViewController: BaseViewController, LoginInput {
     
     @IBOutlet weak var viewHolder: UIView!
     
+    fileprivate var profileSegue = "logProfileSegue"
+    
     @IBAction func btnEnter(_ sender: Any) {
         presenter.didEnterPressed(login: tiLogin.text!, password: tiPassword.text!)
     }
     
     func showProfile(user: User) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileScreen") as! ProfileViewController; // MySecondSecreen the storyboard ID
-        vc.user = user
-        self.present(vc, animated: true, completion: nil);
+        performSegue(withIdentifier: profileSegue, sender: user)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == profileSegue, let user = sender as? User {
+            let destinationController = segue.destination as! ProfileViewController
+            destinationController.user = user
+        }
     }
     
     override func changeIntoWhite() {
         view.backgroundColor = .white
-        viewHolder.backgroundColor = .white
-        
-        
-        self.tabBarController?.tabBar.barTintColor = UIColor.white
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.black
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
-        }
+        viewHolder.backgroundColor = .white        
     }
     
     override func changeIntoBlack() {
         view.backgroundColor = .gray
         viewHolder.backgroundColor = .gray
-        
-        self.tabBarController?.tabBar.barTintColor = UIColor.gray
-        
-        self.tabBarController?.tabBar.tintColor = UIColor.white
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.white
-        }
     }
 }

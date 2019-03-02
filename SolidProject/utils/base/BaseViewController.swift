@@ -85,16 +85,5 @@ open class BaseViewController: UIViewController {
     }
     
     func changeIntoWhite(){
-        view.backgroundColor = .gray
-        if scrollView != nil {
-            scrollView.backgroundColor = .white
-        }
-
-        self.tabBarController?.tabBar.barTintColor = UIColor.white
-
-        self.tabBarController?.tabBar.tintColor = UIColor.black
-        if #available(iOS 10.0, *) {
-            self.tabBarController?.tabBar.unselectedItemTintColor? = UIColor.gray
-        }
     }
 }
