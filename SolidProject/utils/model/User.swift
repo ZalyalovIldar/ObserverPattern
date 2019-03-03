@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// модель класса пользователя для хранения его информации
 class User: NSObject, NSCoding {
     
     @objc var login: String
@@ -25,6 +26,8 @@ class User: NSObject, NSCoding {
         self.bDay = bDay
         self.mail = mail
     }
+    
+    /// вспомогательный метод для преобразования моделей в archiever
     func encode(with aCoder: NSCoder) {
         aCoder.encode(login, forKey: #keyPath(User.login))
         aCoder.encode(password, forKey: #keyPath(User.password))
@@ -34,6 +37,7 @@ class User: NSObject, NSCoding {
         aCoder.encode(mail, forKey: #keyPath(User.mail))
     }
     
+    /// вспомогательный метод для преобразования моделей из archiever
     required init?(coder aDecoder: NSCoder) {
         login = aDecoder.decodeObject(forKey: #keyPath(User.login)) as! String
         password = aDecoder.decodeObject(forKey: #keyPath(User.password)) as! String

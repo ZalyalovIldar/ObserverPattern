@@ -273,9 +273,9 @@
 		CEF2288F2222FE4A00F8C85E /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				CEF228952222FEA300F8C85E /* SettingsViewController.swift */,
 				CEF228912222FE6400F8C85E /* SettingsInput.swift */,
 				CEF228932222FE6F00F8C85E /* SettingsOutput.swift */,
-				CEF228952222FEA300F8C85E /* SettingsViewController.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";

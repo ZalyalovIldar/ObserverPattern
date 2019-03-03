@@ -13,19 +13,25 @@ class SettingsPresenter: SettingsOutput {
     
     weak var view: SettingsInput!
     var dataManager: DataManagerProtocol!
+    var strings: Strings!
     
     let notificationCenter = NotificationCenter.default
     
+    /// метод при переключении цвета
+    ///
+    /// - Parameter index: индекс переключателя
     func switchColor(index: Int) {
         switch index {
-        case 0:
-            view.changeIntoWhite()
-             notificationCenter.post(name: NSNotification.Name.changeColorNotification, object: view, userInfo: ["color": "white"])
-            break
-        default:
-            notificationCenter.post(name: NSNotification.Name.changeColorNotification, object: view, userInfo: ["color": "black"])
-            view.changeIntoBlack()
-            break
+            
+            case 0:
+    //            меняем насстройки на белый
+                notificationCenter.post(name: NSNotification.Name.changeColorNotification, object: view, userInfo: [strings.color_title: strings.color_white])
+                break
+            
+            default:
+                notificationCenter.post(name: NSNotification.Name.changeColorNotification, object: view, userInfo: [strings.color_title: strings.color_black])
+//                view.changeIntoBlack()
+                break
         }
     }
 }

@@ -10,10 +10,10 @@ import Foundation
 
 protocol LoginInput: AnyObject {
     
-    //отображение сообщений
+    // отображение сообщений
     func showMessage(text: String?)
     func printMessage(text: String?)
     
+    // отборжание информации о пользователе
     func showProfile(user: User)
-    
 }

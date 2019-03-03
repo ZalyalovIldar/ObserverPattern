@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// протокол к бд для инкапсуляции
 protocol DataManagerProtocol {
     
     func saveUser(user: [User])
@@ -18,10 +19,14 @@ protocol DataManagerProtocol {
     
 }
 
+/// база данных
 class DataManager: DataManagerProtocol {
     
     let keyUsers = "key_user"
     
+    /// получение всех пользователей
+    ///
+    /// - Returns: массив пользователей
     func getAllUsers() -> [User]? {
         var currentUsers: [User]?
         if let currentUsersData = UserDefaults.standard.data(forKey: keyUsers) {
@@ -35,12 +40,19 @@ class DataManager: DataManagerProtocol {
         return currentUsers
     }
     
+    /// сохранение массива пользователей в бд
+    ///
+    /// - Parameter user: масссив пользователей
     func saveUser(user: [User]) {
         let archiever = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(archiever, forKey: keyUsers)
         UserDefaults.standard.synchronize()
     }
     
+    /// получение юзера по логину
+    ///
+    /// - Parameter login: логин пользователя
+    /// - Returns: пользователь
     func getUserByLogin(login: String) -> User? {
         let allUsers = getAllUsers()
         if allUsers != nil {

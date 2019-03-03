@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol ProfileInput: AnyObject {
-    
-}
+protocol ProfileInput: AnyObject { }

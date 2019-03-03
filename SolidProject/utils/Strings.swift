@@ -21,7 +21,12 @@ class Strings {
     /// сообщение, в случае неправильно введенного пароля
     let error_wrong_pass = "Пароль введен неверно"
     
-    //MARK: - alert
+    // MARK: - alert
     let alert_ok = "Ok"
     let alert_title = ""
+    
+    // MARK: - цвета
+    let color_title = "color"
+    let color_white = "white"
+    let color_black = "black"
 }

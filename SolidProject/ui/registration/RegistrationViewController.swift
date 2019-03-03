@@ -19,9 +19,7 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
     @IBOutlet weak var tiSurname: UITextField!
     @IBOutlet weak var tiBday: UITextField!
     @IBOutlet weak var tiMail: UITextField!
-    
     @IBOutlet weak var viewHolder: UIView!
-    @IBOutlet weak var test: UILabel!
     
     fileprivate let profileSegue = "regProfileSegue"
     
@@ -29,10 +27,12 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
         super.viewDidLoad()
     }
     
+    // MARK: - Navigation
     func openProfileScreen(user: User) {
         performSegue(withIdentifier: profileSegue, sender: user)
     }
     
+    /// подготовка необходимых данных для отправки на другой экран
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == profileSegue, let user = sender as? User {
             let destinationController = segue.destination as! ProfileViewController
@@ -40,25 +40,31 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
         }
     }
     
-    @IBAction func btnSave(_ sender: Any) {
-        presenter.didSavePressed(login: tiLogin.text!, password: tiPassword.text!, repeatPass: tiRepeatPassword.text!, name: tiName.text!, surname: tiSurname.text!, bDay: tiBday.text!, mail: tiMail.text!)
-    }
+    //MARK: - цвет
     
+    /// смена стиля экрана на темный
     override func changeIntoBlack() {
         changeBackgroundColor(color: .gray)
         changeKeyboardAppearence(style: .dark)
     }
     
+    /// смена стиля экрана на белый
     override func changeIntoWhite() {
-        changeBackgroundColor(color: .white)        
+        changeBackgroundColor(color: .white)
         changeKeyboardAppearence(style: .default)
     }
     
+    /// смена цвета компонентов
+    ///
+    /// - Parameter color: необходимый цвет
     func changeBackgroundColor(color: UIColor) {
         view.backgroundColor = color
         viewHolder.backgroundColor = color
     }
-
+    
+    /// смена цвета клавиатуры
+    ///
+    /// - Parameter style: необходимый стиль
     func changeKeyboardAppearence(style: UIKeyboardAppearance)  {
         tiLogin.keyboardAppearance = style
         tiPassword.keyboardAppearance = style
@@ -67,5 +73,10 @@ class RegistrationViewController: BaseViewController, RegistrationInput {
         tiSurname.keyboardAppearance = style
         tiBday.keyboardAppearance = style
         tiMail.keyboardAppearance = style
+    }
+    
+    /// метод нажатия на кнопку сохранения пользователя
+    @IBAction func btnSave(_ sender: Any) {
+        presenter.didSavePressed(login: tiLogin.text!, password: tiPassword.text!, repeatPass: tiRepeatPassword.text!, name: tiName.text!, surname: tiSurname.text!, bDay: tiBday.text!, mail: tiMail.text!)
     }
 }

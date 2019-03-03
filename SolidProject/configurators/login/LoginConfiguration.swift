@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 class LoginConfiguration: NSObject {
+    
     @IBOutlet weak var viewController: UIViewController!
     
     override func awakeFromNib() {
+        
+        // method for connecting View with Presenter
         configure()
     }
     
@@ -25,13 +28,13 @@ class LoginConfiguration: NSObject {
         let data: DataManagerProtocol = DataManager()
         let strings = Strings()
 
-        //connect view, strings and dataManager to presenter
+        // connect view, strings and dataManager to presenter
         presenter.view = view
         presenter.dataManager = data
         presenter.strings = strings
 
 
-        //connect presenter and strings to View
+        // connect presenter and strings to View
         view.presenter = presenter
         view.strings = strings
     }

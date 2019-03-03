@@ -10,5 +10,10 @@ import Foundation
 
 protocol LoginOutput {
     
+    /// нажатие на кнопку входа
+    ///
+    /// - Parameters:
+    ///   - login: введенный логин
+    ///   - password: введенный пароль
     func didEnterPressed(login: String, password: String)
 }

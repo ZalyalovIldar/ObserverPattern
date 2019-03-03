@@ -8,10 +8,4 @@
 
 import Foundation
 
-protocol SettingsInput: AnyObject {
-    
-    func changeIntoBlack()
-    
-    func changeIntoWhite()
-    
-}
+protocol SettingsInput: AnyObject { }

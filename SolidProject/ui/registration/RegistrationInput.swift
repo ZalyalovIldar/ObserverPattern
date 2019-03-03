@@ -10,9 +10,10 @@ import Foundation
 
 protocol RegistrationInput: AnyObject {
     
-    //отображение сообщений
+    // отображение сообщений
     func showMessage(text: String?)
     func printMessage(text: String?)
     
+    // открытие экрана профиля
     func openProfileScreen(user: User)
 }

@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 class SettingsConfiguration: NSObject {
+    
     @IBOutlet weak var viewController: UIViewController!
     
     override func awakeFromNib() {
+        
+        // method for connecting View with Presenter
         configure()
     }
     
@@ -23,13 +26,15 @@ class SettingsConfiguration: NSObject {
         
         let presenter = SettingsPresenter()
         let data: DataManagerProtocol = DataManager()
+        let strings = Strings()
         
-        //connect view, strings and dataManager to presenter
+        // connect view, strings and dataManager to presenter
         presenter.view = view
         presenter.dataManager = data
+        presenter.strings = strings
         
         
-        //connect presenter and strings to View
+        // connect presenter to View
         view.presenter = presenter
     }
 }

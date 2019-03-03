@@ -10,5 +10,9 @@ import Foundation
 
 protocol SettingsOutput {
     
-     func switchColor(index: Int) 
+    
+    /// поменять цвет приложения
+    ///
+    /// - Parameter index: индекс состояния переключателя
+    func switchColor(index: Int)
 }
